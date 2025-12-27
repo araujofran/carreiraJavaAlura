@@ -1,6 +1,8 @@
+package br.com.alura.controlefluxo;
+
 import java.util.Scanner;
 
-public class contaBancariaVirtual {
+public class ContaBancariaVirtual {
 
     public static void main(String[] args) {
 
