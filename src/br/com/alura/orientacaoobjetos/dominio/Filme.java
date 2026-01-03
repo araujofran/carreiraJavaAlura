@@ -1,44 +1,64 @@
 package br.com.alura.orientacaoobjetos.dominio;
 
-public class Conta {
-    private int numero;
-    private int agencia;
-    private double saldo;
+public class Filme {
 
-    public void deposita(double valor) {
-        saldo += valor;
+    private String nome;
+    private int anoDeLancamento;
+    private int duracaoEmMinutos;
+    private boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
+
+    public void exibeFichaTecnica() {
+        System.out.println("Nome do filme: " +nome);
+        System.out.println("Ano de lançamento: " +anoDeLancamento);
+        System.out.println("Duração em minutos: " +duracaoEmMinutos);
+        System.out.println("Incluído no plano: " +incluidoNoPlano);
     }
 
-    public void saca(double valor) {
-        if (valor <= saldo) {
-            saldo -= valor;
-        } else {
-            System.out.println("Saldo insuficiente.");
-        }
+    public void avalia(double nota) {
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
     }
 
-
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public double pegaMedia() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
-    public void setAgencia(int agencia) {
-        this.agencia = agencia;
+    public String getNome() {
+        return this.nome;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public int getNumero() {
-        return numero;
+    public int getAnoDeLancamento() {
+        return this.anoDeLancamento;
     }
 
-    public int getAgencia() {
-        return agencia;
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
     }
 
-    public double getSaldo() {
-        return saldo;
+    public boolean getIncluidoNoPlano() {
+        return this.incluidoNoPlano;
     }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return this.duracaoEmMinutos;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+    public int getTotalDeAvaliacoes() {
+        return this.totalDeAvaliacoes;
+    }
+
 }

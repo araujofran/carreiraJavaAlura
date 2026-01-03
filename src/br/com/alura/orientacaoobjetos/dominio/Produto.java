@@ -1,4 +1,4 @@
-package br.com.alura.orientacaoobjetos;
+package br.com.alura.orientacaoobjetos.dominio;
 
 public class Produto {
     String nome;
